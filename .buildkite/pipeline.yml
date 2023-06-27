@@ -2,8 +2,6 @@ steps:
   - label: ":hammer: Example Script"
     command: "script.sh"
     artifact_paths: "artifacts/*"
-  - label: ":rocket: Test"
-    command: " npm test "
-    key: Test
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+  
+agents:
+  queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
